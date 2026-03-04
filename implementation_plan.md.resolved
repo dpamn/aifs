@@ -1,0 +1,50 @@
+# Competitive Exam Website Implementation Plan
+
+The objective is to replace the default Vite boilerplate with a modern, high-quality, and visually stunning landing page for competitive exam preparation.
+
+## User Review Required
+
+> [!CAUTION]
+> The existing Vite boilerplate files ([main.js](file:///d:/AIFS/src/main.js), [style.css](file:///d:/AIFS/src/style.css), [counter.js](file:///d:/AIFS/src/counter.js)) will be completely replaced by the new website structure. Please confirm that it is okay to overwrite these files.
+> We'll be using Vanilla JavaScript and CSS as per the current setup, rather than switching to a framework like React, to keep it lightweight while ensuring a premium look and feel.
+
+## Proposed Changes
+
+### Core Files
+#### [MODIFY] [index.html](file:///d:/AIFS/index.html)
+- Add Google Fonts (Inter and Outfit).
+- Add FontAwesome for icons.
+- Add SEO meta tags and update the `<title>`.
+- Set up the root `<div id="app"></div>`.
+
+#### [MODIFY] [main.js](file:///d:/AIFS/src/main.js)
+- Rewrite the entire file to inject the HTML structure into `#app`.
+- Structure will include:
+  - **Navbar**: Sticky header with logo and navigation links.
+  - **Hero Section**: Engaging headline, dynamic gradient text, and primary Call-To-Action (CTA).
+  - **Features Section**: Grid layout highlighting platform benefits (e.g., Mock Tests, Expert Faculty, Real-time Analytics) with icons and micro-animations.
+  - **Popular Exams Section**: Cards representing different competitive exams (e.g., JEE, NEET, UPSC).
+  - **Footer**: Simple footer with copyright and links.
+- Add JavaScript logic for mobile menu toggling and simple interactions.
+
+#### [DELETE] [counter.js](file:///d:/AIFS/src/counter.js)
+- Remove this boilerplate file as it is no longer needed.
+
+### Design System & Styling
+#### [MODIFY] [style.css](file:///d:/AIFS/src/style.css)
+- Implement a modern, premium design system using CSS variables (`:root`).
+- Use a color palette: Vibrant Primary (e.g., Indigo/Blue), Dark accents, and clean off-white backgrounds.
+- Add utility classes for layout (flexbox, grid), typography, and spacing.
+- Implement micro-animations (hover effects on buttons and cards, smooth transitions).
+- Ensure full responsiveness using CSS media queries.
+
+## Verification Plan
+
+### Automated Tests
+Currently, there are no tests set up in the Vite boilerplate. We will rely on manual visual verification.
+
+### Manual Verification
+1. I will run the Vite development server using `npm run dev` in the terminal.
+2. I will use the browser tool to load `http://localhost:5173` and capture screenshots.
+3. I will verify that the layout is visually appealing, responsive, and matches the premium design requirements.
+4. I will verify interactions like hover states and mobile menu toggling.

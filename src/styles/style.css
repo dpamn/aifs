@@ -1,18 +1,18 @@
 :root {
-  /* Colors */
+  /* Fonts */
+  --font-family-body: 'Inter', sans-serif;
+  --font-family-heading: 'Outfit', sans-serif;
+
+  /* Colors - Light Theme (Default) */
   --primary-color: #4f46e5;
-  /* Indigo */
   --primary-hover: #4338ca;
   --secondary-color: #10b981;
-  /* Emerald */
   --background-light: #f8fafc;
   --background-white: #ffffff;
+  --background-alt: #f1f5f9;
   --text-main: #0f172a;
   --text-muted: #64748b;
   --border-color: #e2e8f0;
-
-  /* Typography */
-  --font-family: 'Inter', sans-serif;
 
   /* Layout & Spacing */
   --max-width: 1200px;
@@ -34,6 +34,36 @@
   --transition-normal: 300ms ease;
 }
 
+/* Dark Theme Variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-light: #0f172a;
+    --background-white: #1e293b;
+    --background-alt: #334155;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --primary-color: #6366f1;
+    --primary-hover: #818cf8;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4);
+  }
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(var(--background-white), 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 /* Reset & Base Styles */
 * {
   margin: 0;
@@ -42,11 +72,21 @@
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-family-body);
   background-color: var(--background-light);
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+  font-family: var(--font-family-heading);
 }
 
 a {
@@ -246,6 +286,7 @@ ul {
 .hero-gradient-text {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
